@@ -13,7 +13,7 @@ const ViewDetail = ({ complain, user }) => {
   const updateStatus = () => {
     setLoading(true);
     axios
-      .put(`http://localhost:3003/api/updatecomplain/${complain._id}`, {
+      .put(`https://server-delta-mocha.vercel.app/api/updatecomplain/${complain._id}`, {
         Status: status,
       })
       .then((res) => {

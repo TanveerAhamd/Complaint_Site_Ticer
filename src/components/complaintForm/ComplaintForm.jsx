@@ -17,7 +17,7 @@ const ComplaintForm = () => {
     const handleSubmit = async () => {
         if (name != '' && contact != '' && department != '') {
             SiteCTX.setIsLoading(true);
-          await  http.post("/api/addcomplain", {
+          await  http.post("https://server-delta-mocha.vercel.app/api/addcomplain", {
                 Name: name,
                 Email: email,
                 Department: department,

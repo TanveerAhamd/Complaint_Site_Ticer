@@ -31,7 +31,7 @@ const Datatable = () => {
   };
 
   useEffect(() => {
-    http.get("/api/applications").then((res) => {
+    http.get("https://server-delta-mocha.vercel.app/api/applications").then((res) => {
       setCustomers(res.data.applications)
       const applications = res.data.applications;
       console.log(customers)
@@ -48,7 +48,7 @@ const Datatable = () => {
   }, []);
 
   const handleSearch = () => {
-    http.get(`/api/applications?startDate=${startDate}&endDate=${endDate}`).then((res) => {
+    http.get(`https://server-delta-mocha.vercel.app/api/applications?startDate=${startDate}&endDate=${endDate}`).then((res) => {
       setCustomers(res.data.applications);
     });
   };

@@ -14,7 +14,7 @@ const LoginForm = () => {
     const [passwrod, setPassword] = useState('');
 
     const loginInputs = () => {
-        axios.post("http://localhost:3003/api/login", {
+        axios.post("https://server-delta-mocha.vercel.app/api/login", {
             email,
             password: passwrod
         })

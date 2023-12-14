@@ -25,7 +25,7 @@ const ChatBox = ({ messages, id, fetchmessage, user }) => {
     const sender = (user.role === 'admin') ? 'fromadmin' : 'fromcomplainer';
 
     axios
-      .post(`http://localhost:3003/api/messages`, {
+      .post(`https://server-delta-mocha.vercel.app/api/messages`, {
         [sender]: fromadmin,
         complainid: id,
       })
