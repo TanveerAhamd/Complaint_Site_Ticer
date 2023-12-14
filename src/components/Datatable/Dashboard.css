@@ -1,0 +1,11 @@
+.dateinput{
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 2px solid grey;
+}
+.searchbtn{
+    margin-top: 10px;
+}

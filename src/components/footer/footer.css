@@ -1,0 +1,16 @@
+.foot{
+    color: rgb(237, 240, 242) !important;
+}
+.foot .footerBG{
+    background-color: #0f7690;
+}
+.foot .footerBottomBG{
+    background-color: #c7a86e;
+}
+.foot a{
+    text-decoration: none;
+    color: rgb(237, 240, 242)!important;
+}
+.foot ul{
+    list-style: none;
+}
