@@ -26,6 +26,7 @@ const Details = () => {
     if (token) {
       const decodedUser = await jwtDecode(token);
       setUser(decodedUser);
+      console.log(user)
     } 
   }
 console.log(user)
