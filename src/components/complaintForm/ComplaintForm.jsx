@@ -49,15 +49,15 @@ const ComplaintForm = () => {
     return (
         <div className='container '>
             <div className="row my-5">
-                <div className="col-5 offset-1 text-left  ps-4">
+                <div className="col-md-6  text-left  ps-4">
                     <div className="w-75">
                         <img src={newComplaintImage} alt="complaintfomr image" />
                         <h3 class="font-bolder p-2">New Complaint</h3>
                         <h5 class="text-grey mb-2 p-2 ">Please provide your contact <br /> details and complaint message</h5>
-                        <Link class="btn btn-success w-100 shadow rounded" to="/trackcomplain">Track Complaint Status</Link>
+                        <Link class="btn btn-success w-75 shadow rounded mx-auto" to="/trackcomplain">Track Complaint </Link>
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-md-6 mt-3 mt-sm-3 mt-xs-3 mt-md-0 ">
                     <form onSubmit={(e) => { e.preventDefault() }}>
                         <div className=" card shadow rounded mx-auto">
                             {/* <h4 className=' text-dark-d4 font-bold text-center card-header p-3 text-black-75 m-0 mb-3 '>ENTER YOUR INFORMATION BELOW</h4> */}

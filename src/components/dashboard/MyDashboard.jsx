@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react'
-import { Button } from 'primereact/button'; 
 import Datatable from '../Datatable/Datatable';
 
 const MyDashboard = () => {
@@ -8,8 +7,6 @@ const MyDashboard = () => {
 
   return (
     <div className="myDashboard container">
-      <div className="row">
-
         <div className="row my-2">
           <div className="col-md-2 p-2 fixed-left bg-light shadow-sm rounded ">
             <div className='mb-3'> <a href="#" className='btn btn-light w-100 text-start'>Dashboard</a></div>
@@ -19,14 +16,13 @@ const MyDashboard = () => {
           </div>
           <div className="col-md-10">
             <div className="row p-2 ">
-          
               <Datatable />
             </div>
           </div>
         </div>
 
       </div>
-    </div>
+
   )
 }
 

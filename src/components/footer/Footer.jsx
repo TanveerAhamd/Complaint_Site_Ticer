@@ -16,7 +16,7 @@ const Footer = () => {
                                 <p className='lh-3 '>Tareen Institute of Computer Education & Resources (TICER) is a leading training institute that aims to provide you with the most sought-after and well-paid IT skills to prepare you for the job market.</p>
                             </div>
                         </div>
-                        <div className="col-md-3  mt-5 offset-3 align-items-start">
+                        <div className="col-md-6  mt-5 align-items-start">
                             <h4 className=''>Contact US</h4>
                             <p className='my-3 '>Ma-Sha-Allah Plaza, opp. Govt Commerce College, Lodhran</p>
                             <div class="footer-links">

@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <div className="container home">
         <div className="row">
-          <div className="col-md-6 ">
+          <div className="col-md-6">
             <div className="justify-content-center mt-5 p-2">
               <h2 className='font-bolder text-dark'>Digital Complaint System </h2>
               <p className='tex-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum beatae quo optio repudiandae iure sed ex pariatur doloremque ipsam porro harum dicta autem voluptas aliquid odit, quod, vitae assumenda ullam?</p>
@@ -21,8 +21,8 @@ const Home = () => {
             </div>
 
           </div>
-          <div className="col-md-6 mt-5 text-center">
-            <img src={mainImage} alt="homepage_right image " className='w-75 1mx-auto' />
+          <div className="col-md-6 mt-5  text-center">
+            <img  src={mainImage} alt="homepage_right image " className='img-fluid' />
           </div>
         </div>
       </div>
