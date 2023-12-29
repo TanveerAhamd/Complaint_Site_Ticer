@@ -5,7 +5,9 @@ import { Link } from "react-router-dom"
 export const Navbar = () => {
   return (
     <>
-      <div className="header-nav d-flex top-fixed">
+
+
+      {/* <div className="header-nav d-flex top-fixed">
         <div className="container">
           <div className="d-flex align-items-center">
             <div className="header-nav-left ">
@@ -16,8 +18,9 @@ export const Navbar = () => {
                   <Link className="info">info@ticer.pk</Link>
                 </li>
                 <li>
-                  <i className="bi bi-telephone-fill me-2"></i>
-                  0326 0833833
+                  <i className="bi bi-telephone-fill me-2">
+                    0326 0833833
+                  </i>
                 </li>
               </ul>
             </div>
@@ -39,8 +42,8 @@ export const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
-      <nav className="navbar navbar-expand-lg navbar-top">
+      </div> */}
+      <nav className="navbar navbar-expand-lg navbar-top  bg-body-tertiary sticky-top">
         <div className="container">
           <a href="https://www.ticer.pk/">
             <img src="https://www.ticer.pk/wp-content/uploads/2023/06/200W-TICER-Logo-PNG.png.webp" alt="" className="navbar-top-icon" />

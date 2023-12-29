@@ -21,14 +21,14 @@ const LoginForm = () => {
             .then(res => {
                 if (res.data.status === true) {
                     localStorage.setItem("userId", res.data.token)
-                    toast("login Successfully !",{
+                    toast("login Successfully !", {
                         autoClose: 1000,
                     });
                     navigate("/dashboard")
                     setEmail("");
                     setPassword("")
                 }
-                else{
+                else {
                     alert("Email or Password error !")
                 }
             })
@@ -36,19 +36,19 @@ const LoginForm = () => {
     }
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
-          e.preventDefault();
-          loginInputs();
+            e.preventDefault();
+            loginInputs();
         }
-      };
+    };
 
     // const notify = () => toast("Login Successfully !");
 
     return (
         <div className="loginFormWrapper ">
             <div className="container ">
-                <div className="row justify-content-center align-items-center ">
-                    <div className=" p-5 w-50 text-center shadow rounded">
-                    <div className="text-center p-2"><img className='loginDashbord' src={logo} alt="Logo" /></div>
+                <div className="row mx-1 justify-content-center align-items-center ">
+                    <div className=" col-12 col-md-6 text-center p-4 shadow rounded">
+                        <div className="text-center p-2"><img className='loginDashbord' src={logo} alt="Logo" /></div>
                         <h2 className="fw-bold">Welcome back</h2>
                         <p className="text-black-50">Please enter your login and password!</p>
                         <div className="input-group mb-3">
@@ -73,7 +73,9 @@ const LoginForm = () => {
                     </div>
                 </div>
             </div>
+
         </div>
+
     )
 }
 
