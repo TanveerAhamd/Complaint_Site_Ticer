@@ -32,13 +32,12 @@ const Datatable = () => {
 
   useEffect(() => {
     http.get("https://server-delta-mocha.vercel.app/api/applications").then((res) => {
+      
       setCustomers(res.data.applications)
       const applications = res.data.applications;
       console.log(customers)
       const activeCustomers = applications.filter(customer => customer.Status === 'ACTIVE');
-
       const approvedCustomers = applications.filter(customer => customer.Status === 'RESOLVED');
-
       const numberOfActiveCustomers = activeCustomers.length;
       const numberOfApprovedCustomers = approvedCustomers.length;
       setActive(numberOfActiveCustomers)
@@ -67,7 +66,7 @@ const Datatable = () => {
 
   return (
     <>
-      <div className="col-4">
+      <div className="col-md-3 py-1">
         <div className="card py-1">
           <div className="card-header ">
             Total Complains
@@ -77,7 +76,7 @@ const Datatable = () => {
           </div>
         </div>
       </div>
-      <div className="col-4">
+      <div className="col-md-3 py-1">
         <div className="card py-1">
           <div className="card-header">
             Active Complains
@@ -87,10 +86,20 @@ const Datatable = () => {
           </div>
         </div>
       </div>
-      <div className="col-4 ">
+      <div className="col-md-3 py-1 ">
         <div className="card py-1">
           <div className="card-header">
             Resolved Complains
+          </div>
+          <div className="card-body">
+            <h5 className="card-title">{approve}</h5>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-3 py-1 ">
+        <div className="card py-1">
+          <div className="card-header">
+            Feedback Received
           </div>
           <div className="card-body">
             <h5 className="card-title">{approve}</h5>
@@ -101,23 +110,23 @@ const Datatable = () => {
         <div className='row my-3'>
           <div className='col-md-3'>
             <div className='card flex justify-content-center'>
-                   <Calendar value={endDate} onChange={(e) => setStartDate(e.value)} placeholder='Choose Start-date'/>
+              <Calendar value={endDate} onChange={(e) => setStartDate(e.value)} placeholder='Choose Start-date' />
             </div>
           </div>
           <div className='col-md-3'>
             <div className='card flex justify-content-center'>
-                   <Calendar value={endDate} onChange={(e) => setEndDate(e.value)} placeholder='Choose end-date'/>
+              <Calendar value={endDate} onChange={(e) => setEndDate(e.value)} placeholder='Choose end-date' />
             </div>
           </div>
           <div className='col-md-2 d-flex'>
-            <button className='btn btn-primary p-2' onClick={handleSearch}>Search</button>
+            <button className='btn btn-primary p-2 justify-content-center' onClick={handleSearch}>Search</button>
           </div>
           <div className='col-md-4'>
             {statusFilter}
           </div>
         </div >
 
-        <DataTable className='h-50' value={customers} paginator rows={5} rowsPerPageOptions={[5, 10, 25, 50]} tableStyle={{ minWidth: '50rem' }}>
+        <DataTable className=' h-50' value={customers} paginator rows={5} rowsPerPageOptions={[5, 10, 25, 50]} tableStyle={{ minWidth: '50rem' }}>
           <Column field="Contact" header="Contact" style={{ width: '25%' }}></Column>
           <Column field="Department" header="Department" style={{ width: '25%' }}></Column>
           <Column field="Status" body={statusBodyTemplate} header="Status" style={{ width: '25%' }} ></Column>

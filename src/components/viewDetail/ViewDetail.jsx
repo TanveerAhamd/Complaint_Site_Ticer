@@ -36,14 +36,14 @@ const ViewDetail = ({ complain, user }) => {
   return (
     <div className="viewDetailWrapaper mt-3">
       <div className="container">
-        <div className="w-75 mx-auto shadow rounded">
+        <div className=" mx-auto shadow rounded">
           <div className="card">
             <div className="card-header">
               <h4 className="text-center p-2 text-black-70 m-0">Complaint Detail view</h4>
             </div>
             <div className="card-body">
               <div className="row">
-                <div className="col-3 p-3">
+                <div className="col-md-2 p-3">
                   <div className="p-1 text-left fw-semibold">Complaint ID :</div>
                   <div className="p-1 text-left fw-semibold">Date :</div>
                   <div className="p-1 text-left fw-semibold">Name :</div>
@@ -51,7 +51,7 @@ const ViewDetail = ({ complain, user }) => {
                   <div className="p-1 text-left fw-semibold">Message :</div>
                   <div className="p-1 text-left fw-semibold">Status :</div>
                 </div>
-                <div className="col-9 p-3">
+                <div className="col-md-9 p-3">
                   <div className="p-1 text-left fw-semibold">{complain.Requestid}</div>
                   <div className="p-1 text-left">
                     {complain.createdAt}
@@ -81,22 +81,22 @@ const ViewDetail = ({ complain, user }) => {
                         </button>
                       </>
                     ) : (
-                      
-                        complain.Status === "ACTIVE"?(
-                          <>
-                  
-                            <mark>ACTIVE</mark>
-                       
-                          </>
-                        ):(
-                          <>
-                          
-                            <span className='btn btn-outline-success  rounded px-2'>RESOLVED</span>
-                     
-                          </>
-                        )
-                      
-                     
+
+                      complain.Status === "ACTIVE" ? (
+                        <>
+
+                          <mark>ACTIVE</mark>
+
+                        </>
+                      ) : (
+                        <>
+
+                          <span className='btn btn-outline-success  rounded px-2'>RESOLVED</span>
+
+                        </>
+                      )
+
+
                     )}
                   </div>
 

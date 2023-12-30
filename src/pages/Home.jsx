@@ -17,6 +17,7 @@ const Home = () => {
       
                 <Link to="/registerComplain" className='btn p-2 btn-success btn-sm text-white w-50 d-block shadow' > Register Complaint </Link>
                 <Link to="/trackcomplain" className='btn p-2 btn-regCmpBtn btn-sm text-white w-50 my-2 d-block shadow' > Complaint Status </Link>
+                <Link to="/feedback" className='btn p-2 btn-feedback btn-sm text-white w-50 my-2 d-block shadow' > Feedback </Link>
         
             </div>
 

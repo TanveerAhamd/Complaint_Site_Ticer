@@ -40,7 +40,7 @@ const ChatBox = ({ messages, id, fetchmessage, user }) => {
 
   return (
     <div className="container">
-      <div class="accordion w-75 mx-auto shadow rounded" id="accordionExample">
+      <div class="accordion  mx-auto shadow rounded" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
