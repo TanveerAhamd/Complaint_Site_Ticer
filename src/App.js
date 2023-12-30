@@ -15,7 +15,7 @@ import Trackcomplain from './pages/dashboard/Trackcomplain';
 import ComplaintForm from './components/complaintForm/ComplaintForm';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Temp from './Temp';
+
 
 
 function App() {
@@ -23,9 +23,8 @@ function App() {
 
   return (
     <div className="App">
-      <Temp/>
-     {/* <Navbar /> */}
-      {/* {
+      <Navbar />
+      {
         isLoading && <Loader />
       }
       <SiteContext.Provider value={{ isLoading, setIsLoading }}>
@@ -41,7 +40,7 @@ function App() {
       <Footer />
 
 
-<ToastContainer/> */}
+<ToastContainer/>
 
     </div>
   );
