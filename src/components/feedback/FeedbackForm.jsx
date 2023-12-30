@@ -27,9 +27,7 @@ const FeedbackForm = () => {
                 if (res.data.status == 'success') {
                     console.log(res.data.message)
                     toast(`Dear ${name}` + res.data.message);
-
                 }
-                navigate('/');
 
             }).catch(e => console.log(e.message))
         } else {
