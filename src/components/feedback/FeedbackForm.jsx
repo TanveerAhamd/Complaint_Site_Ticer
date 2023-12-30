@@ -13,7 +13,7 @@ const FeedbackForm = () => {
 
     const handleSubmit = async () => {
         if (name != '' || message != '') {
-            console.log(name,contact,message,email)
+            console.log(name, contact, message, email)
             // https://server-delta-mocha.vercel.app
             await http.post("https://server-delta-mocha.vercel.app/api/addfeedback", {
                 Name: name,
@@ -24,12 +24,12 @@ const FeedbackForm = () => {
             }).then((res) => {
                 // need to
                 console.log("submition res", res.data.status)
-                if(res.data.status == 'success'){
+                if (res.data.status == 'success') {
                     console.log(res.data.message)
-                    toast(`Dear ${name}`+ res.data.message);
+                    toast(`Dear ${name}` + res.data.message);
 
                 }
-        navigate('/dashbord');
+                navigate('/');
 
             }).catch(e => console.log(e.message))
         } else {
