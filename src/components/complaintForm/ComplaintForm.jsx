@@ -69,7 +69,7 @@ const ComplaintForm = () => {
                                         value={name}
                                         onChange={(e) => { setName(e.target.value) }}
                                         className="form-control p-2"
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         aria-describedby="emailHelp"
                                         placeholder='Enter Name '
                                     />
@@ -78,7 +78,7 @@ const ComplaintForm = () => {
                                     <input
                                         type="text"
                                         value={contact}
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         onChange={(e) => { setContact(e.target.value) }}
                                         className="form-control p-2"
                                         placeholder='Contact Number '
@@ -88,7 +88,7 @@ const ComplaintForm = () => {
                                     <input
                                         type="email"
                                         value={email}
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         onChange={(e) => { setEmail(e.target.value) }}
                                         className="form-control p-2"
                                         placeholder='Enter Email'

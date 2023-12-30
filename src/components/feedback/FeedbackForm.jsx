@@ -1,8 +1,10 @@
 import { http } from '../../helpers/http';
 import React, { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const FeedbackForm = () => {
+    const navigate = useNavigate();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [department, setDepartment] = useState('');
@@ -10,7 +12,7 @@ const FeedbackForm = () => {
     const [contact, setContact] = useState("");
 
     const handleSubmit = async () => {
-        if (name != '' && contact != '' && message != '') {
+        if (name != '' || message != '') {
             console.log(name,contact,message,email)
             // https://server-delta-mocha.vercel.app
             await http.post("https://server-delta-mocha.vercel.app/api/addfeedback", {
@@ -25,7 +27,9 @@ const FeedbackForm = () => {
                 if(res.data.status == 'success'){
                     console.log(res.data.message)
                     toast(`Dear ${name}`+ res.data.message);
+
                 }
+        navigate('/dashbord');
 
             }).catch(e => console.log(e.message))
         } else {
@@ -57,16 +61,17 @@ const FeedbackForm = () => {
                                         value={name}
                                         onChange={(e) => { setName(e.target.value) }}
                                         className="form-control p-2"
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         aria-describedby="emailHelp"
                                         placeholder='Your Name '
+                                        required="true"
                                     />
                                 </div>
                                 <div className="mb-3">
                                     <input
                                         type="text"
                                         value={contact}
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         onChange={(e) => { setContact(e.target.value) }}
                                         className="form-control p-2"
                                         placeholder='Contact Number'
@@ -76,7 +81,7 @@ const FeedbackForm = () => {
                                     <input
                                         type="email"
                                         value={email}
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         onChange={(e) => { setEmail(e.target.value) }}
                                         className="form-control p-2"
                                         placeholder='Enter Email'
@@ -90,10 +95,10 @@ const FeedbackForm = () => {
                                     <option value="SupportingStaff">Supporting Staff</option>
                                 </select> */}
                                 {/* <div className="input-group mb-3">
-                        <input type="file" autocomplete="off" className="form-control p-2" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
+                        <input type="file" autoComplete="off" className="form-control p-2" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
                     </div> */}
                                 <div className=" mb-3 h-50 form-outline">
-                                    <textarea value={message} onChange={(e) => { setMessage(e.target.value) }} className="form-control" id="textAreaExample1" placeholder='Feedback / Suggestion ' rows="4"></textarea>
+                                    <textarea value={message} required="true" onChange={(e) => { setMessage(e.target.value) }} className="form-control" id="textAreaExample1" placeholder='Feedback / Suggestion ' rows="4"></textarea>
                                 </div>
                                 <div className="text-center cf">
                                     <button onClick={handleSubmit} className=" p-2 text-center btn btn-color btn-sm text-white w-50 ">
