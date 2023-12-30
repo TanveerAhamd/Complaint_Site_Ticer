@@ -17,7 +17,7 @@ const ComplaintForm = () => {
     const handleSubmit = async () => {
         if (name != '' && contact != '' && department != '') {
             SiteCTX.setIsLoading(true);
-          await  http.post("https://server-delta-mocha.vercel.app/api/addcomplain", {
+            await http.post("https://server-delta-mocha.vercel.app/api/addcomplain", {
                 Name: name,
                 Email: email,
                 Department: department,
@@ -25,12 +25,12 @@ const ComplaintForm = () => {
                 Complainmessage: message
             }).then((res) => {
                 // need to 
-                console.log( "submition res",res.data)
-                console.log( "submition res1",res.data.complain.Requestid)
+                console.log("submition res", res.data)
+                console.log("submition res1", res.data.complain.Requestid)
 
-                alert(`Dear ${name} your's Complaint ID is ${res.data.staus}`);
+                // alert(`Dear ${name} your's Complaint ID is ${res.data.complain.Requestid}`);
 
-                toast(`Application is submitted successfully `);
+                // toast(`Application is submitted successfully `);
 
             }).catch(e => console.log(e.message)).finally(() => SiteCTX.setIsLoading(false))
         } else {
@@ -101,13 +101,9 @@ const ComplaintForm = () => {
                                     <option value="TeachingStaff">Teaching Staff</option>
                                     <option value="SupportingStaff">Supporting Staff</option>
                                 </select>
-                                {/* <div className="input-group mb-3">
-                        <input type="file" autocomplete="off" className="form-control p-2" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
-                    </div> */}
                                 <div className=" mb-3 h-50 form-outline">
                                     <textarea value={message} onChange={(e) => { setMessage(e.target.value) }} className="form-control" id="textAreaExample1" placeholder='Complain / Suggestion ' rows="4"></textarea>
                                 </div>
-
                                 <div className="text-center cf">
                                     <button onClick={handleSubmit} className=" p-2 text-center btn btn-color btn-sm text-white w-50">
                                         Submit
@@ -118,12 +114,7 @@ const ComplaintForm = () => {
 
                     </form>
                 </div>
-                {/* <h4 className="fw-bold card card-header text-center mx-auto">Digital Complain Form</h4> */}
-                {/* <h4 className='text-center card card-header p-2 text-black-75 m-0 w-50 mx-auto'>Digital Complaint form</h4> */}
-
-
             </div>
-
         </div>
     )
 }
