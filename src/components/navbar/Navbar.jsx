@@ -45,7 +45,7 @@ export const Navbar = () => {
       </div> */}
       <nav className="navbar navbar-expand-lg navbar-top  bg-body-tertiary sticky-top">
         <div className="container">
-          <a href="https://www.ticer.pk/">
+          <a href="/">
             <img src="https://www.ticer.pk/wp-content/uploads/2023/06/200W-TICER-Logo-PNG.png.webp" alt="" className="navbar-top-icon" />
           </a>
           <button
@@ -101,11 +101,11 @@ export const Navbar = () => {
                   LOGIN
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink className="nav-link" to="/dashboard">
                   DASHBOARD
                 </NavLink>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <a href="https://www.ticer.pk/contact-us/">
                   CONTACT US

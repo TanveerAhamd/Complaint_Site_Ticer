@@ -15,6 +15,7 @@ import Trackcomplain from './pages/dashboard/Trackcomplain';
 import ComplaintForm from './components/complaintForm/ComplaintForm';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import FeedbackForm from './components/feedback/FeedbackForm';
 
 
 
@@ -34,6 +35,7 @@ function App() {
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/dashboard/details/:id' element={<Details />} />
           <Route path='/registerComplain' element={<ComplaintForm />} />
+          <Route path='/feedback' element={<FeedbackForm />} />
           <Route path='/trackcomplain' element={<Trackcomplain />} />
         </Routes>
       </SiteContext.Provider>
