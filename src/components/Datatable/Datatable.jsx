@@ -72,7 +72,7 @@ const Datatable = () => {
             Total Complains
           </div>
           <div className="card-body">
-            <h5 className="card-title ">{customers.length}new length</h5>
+            <h5 className="card-title ">{customers.length}</h5>
           </div>
         </div>
       </div>
