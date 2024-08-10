@@ -15,7 +15,7 @@ const FeedbackForm = () => {
         if (name != '' || message != '') {
             console.log(name, contact, message, email)
             // https://server-delta-mocha.vercel.app
-            await http.post("https://server-delta-mocha.vercel.app/api/addfeedback", {
+            await http.post("https://server-theta-seven-20.vercel.app/api/addfeedback", {
                 Name: name,
                 Email: email,
                 // Department: department,
