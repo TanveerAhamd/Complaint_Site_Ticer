@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { SERVER_URL } from '../../helpers/http';
 
 const LoginForm = () => {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ const LoginForm = () => {
     const [password, setPassword] = useState('');
 
     const loginInputs = () => {
-        axios.post("https://server-delta-mocha.vercel.app/api/login", {
+        axios.post(`${SERVER_URL}/api/login`, {
             email,
             password: password
         })

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { SERVER_URL } from '../../helpers/http';
 
 const Feedbacks = () => {
     const [data, setData] = useState([]);
@@ -8,7 +9,7 @@ const Feedbacks = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://server-delta-mocha.vercel.app/api/feedbacks'); // Replace with your API endpoint
+                const response = await axios.get(`${SERVER_URL}/api/feedbacks`); // Replace with your API endpoint
                 setData(response.data.feedbacks);
             } catch (error) {
                 console.error('Error fetching data:', error);

@@ -7,3 +7,7 @@ export const http = axios.create({
       //'Authorization': 'token <your-token-here> -- https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token'
     }
   });
+
+
+  export const SERVER_URL = 'https://server-theta-seven-20.vercel.app/'
+    // export const SERVER_URL = 'http://localhost:3003'

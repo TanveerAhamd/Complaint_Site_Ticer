@@ -5,6 +5,7 @@ import axios from "axios"
 import trackingimage from '../dashboard/track_complaint.png'
 import { useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
+import { SERVER_URL } from "../../helpers/http"
 
 function Trackcomplain() {
     const navigate = useNavigate()
@@ -16,7 +17,7 @@ function Trackcomplain() {
         if(requid == ""){
             alert("Complain Id is required !");
         } else{
-          await axios.get(`https://server-delta-mocha.vercel.app/api/applications?requestid=${requid}`)
+          await axios.get(`${SERVER_URL}/api/applications?requestid=${requid}`)
          .then(res => {
                 if (res.data.applications.length >0) {
                     navigate(`/dashboard/details/${res.data.applications[0]._id}`)

@@ -5,6 +5,7 @@ import axios from 'axios';
 import {jwtDecode} from 'jwt-decode';  // Import jwt-decode library
 import './Detail.css';
 import ChatBox from "./ChatBox"
+import { SERVER_URL } from '../../helpers/http';
 
 
 const Details = () => {
@@ -31,14 +32,14 @@ const Details = () => {
   }
 console.log(user)
   useEffect(() => {
-    axios.get(`https://server-delta-mocha.vercel.app/api/getbyid/${id}`).then((res) => {
+    axios.get(`${SERVER_URL}/api/getbyid/${id}`).then((res) => {
       setComplain(res.data.complain);
     });
     fetchmessage();
   }, [id, user, navigate]);
 
   const fetchmessage = () => {
-    axios.get(`https://server-delta-mocha.vercel.app/api/messages/${id}`).then((res) => {
+    axios.get(`${SERVER_URL}/api/messages/${id}`).then((res) => {
       setMessages(res.data);
     });
   }
