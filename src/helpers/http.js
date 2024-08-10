@@ -9,5 +9,5 @@ export const http = axios.create({
   });
 
 
-  export const SERVER_URL = 'https://server-theta-seven-20.vercel.app/'
+  export const SERVER_URL = 'https://server-theta-seven-20.vercel.app'
     // export const SERVER_URL = 'http://localhost:3003'
