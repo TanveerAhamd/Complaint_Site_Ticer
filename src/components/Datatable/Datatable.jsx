@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Dropdown } from 'primereact/dropdown';
-import { http } from '../../helpers/http';
+import { http, SERVER_URL } from '../../helpers/http';
 import { Link } from "react-router-dom"
 import "./Dashboard.css";
 import { Calendar } from 'primereact/calendar';
@@ -31,7 +31,7 @@ const Datatable = () => {
   };
 
   useEffect(() => {
-    http.get("https://server-delta-mocha.vercel.app/api/applications").then((res) => {
+    http.get(`${SERVER_URL}/api/applications`).then((res) => {
       
       setCustomers(res.data.applications)
       const applications = res.data.applications;
@@ -47,7 +47,7 @@ const Datatable = () => {
   }, []);
 
   const handleSearch = () => {
-    http.get(`https://server-delta-mocha.vercel.app/api/applications?startDate=${startDate}&endDate=${endDate}`).then((res) => {
+    http.get(`${SERVER_URL}/api/applications?startDate=${startDate}&endDate=${endDate}`).then((res) => {
       setCustomers(res.data.applications);
     });
   };

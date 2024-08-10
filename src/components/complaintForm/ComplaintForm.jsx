@@ -1,4 +1,4 @@
-import { http } from '../../helpers/http';
+import { http, SERVER_URL } from '../../helpers/http';
 import './complaintForm.css'
 import React, { useContext, useState } from 'react'
 import { SiteContext } from '../../context/SiteContext';
@@ -17,7 +17,7 @@ const ComplaintForm = () => {
     const handleSubmit = async () => {
         if (name != '' && contact != '' && department != '') {
             SiteCTX.setIsLoading(true);
-            await http.post("https://server-delta-mocha.vercel.app/api/addcomplain", {
+            await http.post(`${SERVER_URL}/api/addcomplain`, {
                 Name: name,
                 Email: email,
                 Department: department,

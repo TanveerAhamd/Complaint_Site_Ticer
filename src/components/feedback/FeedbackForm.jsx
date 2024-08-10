@@ -1,4 +1,4 @@
-import { http } from '../../helpers/http';
+import { http, SERVER_URL } from '../../helpers/http';
 import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -15,7 +15,7 @@ const FeedbackForm = () => {
         if (name != '' || message != '') {
             console.log(name, contact, message, email)
             // https://server-delta-mocha.vercel.app
-            await http.post("https://server-theta-seven-20.vercel.app/api/addfeedback", {
+            await http.post(`${SERVER_URL}/api/addfeedback`, {
                 Name: name,
                 Email: email,
                 // Department: department,
