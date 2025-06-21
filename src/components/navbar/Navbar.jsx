@@ -46,7 +46,8 @@ export const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-top  bg-body-tertiary sticky-top">
         <div className="container">
           <a href="/">
-            <img src="https://www.ticer.pk/wp-content/uploads/2023/06/200W-TICER-Logo-PNG.png.webp" alt="" className="navbar-top-icon" />
+         
+            <img src="ticerlogo.png" alt="" className="navbar-top-icon" />
           </a>
           <button
             className="navbar-toggler"
